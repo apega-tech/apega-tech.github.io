@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @HeavenTacia7
+- 👋 Hi, I’m Anastacia Pena Galicia
 - 👀 I’m interested in Computer Science, AI Governance, Tech Policy, and AI Ethics.
 - 🌱 I’m currently expanding my skills in Python, SQL, Data Analysis, Machine Learning foundations, and Cybersecurity compliance.
 - 🎯 My goal is to bridge the gap between technical AI development and robust governance frameworks to ensure safe, ethical, and secure deployment.
