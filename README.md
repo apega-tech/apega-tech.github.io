@@ -45,3 +45,5 @@ must also sit at the root for the download buttons to work.
 - Add a blog/notes section for write-ups on what I'm learning
 - Add basic analytics to see which sections get the most attention
 - Keep Experience/Education in sync as the resume evolves
+ns get the most attention
+- Keep Experience/Education in sync as the resume evolves
