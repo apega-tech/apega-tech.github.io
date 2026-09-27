@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anastacia Pena Galicia — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF9F6; --ink:#16141F; --ink-soft:#43404E;
+  --violet:#5A3DE0; --cyan:#0A9E93; --coral:#E8386E; --amber:#B4740A;
+  --card:#FFFFFF; --line:#E1DCF2; --shadow:rgba(90,61,224,.14);
+  --font-display:'Space Grotesk',sans-serif; --font-body:'Inter',sans-serif; --font-mono:'JetBrains Mono',monospace;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15131E; --ink:#F3F1FA; --ink-soft:#B6B1CC;
+    --card:#1E1B2C; --line:#332F49; --shadow:rgba(108,77,245,.28);
+    --violet:#9D8BFF; --cyan:#3FE0D2; --coral:#FF7FA3; --amber:#FFC24D;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15131E; --ink:#F3F1FA; --ink-soft:#B6B1CC;
+  --card:#1E1B2C; --line:#332F49; --shadow:rgba(108,77,245,.28);
+  --violet:#9D8BFF; --cyan:#3FE0D2; --coral:#FF7FA3; --amber:#FFC24D;
+}
+:root[data-theme="light"]{
+  --paper:#FAF9F6; --ink:#16141F; --ink-soft:#43404E;
+  --violet:#5A3DE0; --cyan:#0A9E93; --coral:#E8386E; --amber:#B4740A;
+  --card:#FFFFFF; --line:#E1DCF2; --shadow:rgba(90,61,224,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:calc(72px + env(safe-area-inset-top,0px)); cursor:url("data:image/png;base64,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") 2 2, auto}
+a, button, .btn, .navcv, #themeBtn, [role="button"]{cursor:url("data:image/png;base64,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") 6 4, pointer}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.55;transition:background .3s,color .3s}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:920px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--paper) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line); padding-top:env(safe-area-inset-top,0px)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:920px;margin:0 auto;padding:0 28px}
+.brand{font-family:var(--font-mono);font-size:15px;font-weight:500;color:var(--violet)}
+nav ul{display:flex;gap:22px;list-style:none}
+nav a{font-size:14px;color:var(--ink-soft);transition:color .2s}
+nav a:hover{color:var(--violet)}
+.navtools{display:flex;align-items:center;gap:14px}
+#themeBtn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--violet);display:flex;align-items:center;justify-content:center;font-size:16px;transition:transform .2s,border-color .2s}
+#themeBtn:hover{border-color:var(--violet);transform:rotate(15deg)}
+#themeBtn:focus-visible, a:focus-visible, button:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+.navcv{font-size:13px;font-weight:600;color:#fff;background:var(--violet);padding:8px 14px;border-radius:100px;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.navcv:hover{background:var(--coral);transform:translateY(-2px);box-shadow:0 10px 24px var(--shadow)}
+.menu-toggle{display:none}
+@media(max-width:700px){
+  nav ul{display:none}
+  .menu-toggle{display:block;background:none;border:none;color:var(--ink);font-size:20px;cursor:pointer}
+}
+
+/* hero */
+.hero{padding:88px 0 72px;position:relative;overflow:hidden}
+.badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12px;color:var(--coral);border:1px solid var(--coral);padding:6px 12px;border-radius:100px;margin-bottom:28px}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--coral);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(36px,6vw,58px);font-weight:700;line-height:1.06;max-width:720px}
+.hero h1 .accent{color:var(--violet)}
+.hero p.lede{margin-top:22px;max-width:560px;color:var(--ink-soft);font-size:17px}
+.hero-links{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
+.btn{font-size:14px;font-weight:600;padding:12px 20px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease,border-color .2s ease}
+.btn-solid{background:var(--violet);color:#fff}
+.btn-solid:hover{background:var(--coral);transform:translateY(-2px);box-shadow:0 10px 24px var(--shadow)}
+.btn-outline{border:1px solid var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--violet);color:var(--violet);transform:translateY(-2px);box-shadow:0 10px 24px var(--shadow)}
+
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:36px}
+.sec-head h2{font-size:26px}
+.sec-head .tag{font-family:var(--font-mono);font-size:12px;color:var(--cyan)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.about-grid p{color:var(--ink-soft);margin-bottom:14px}
+.about-grid p strong{color:var(--ink)}
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;height:fit-content}
+.info-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.info-row:last-child{border-bottom:none}
+.info-row span:first-child{color:var(--ink-soft)}
+.info-row span:last-child{font-weight:500;text-align:right}
+@media(max-width:700px){.about-grid{grid-template-columns:1fr}}
+
+/* skills */
+.skill-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill-card{border-radius:16px;padding:20px;background:var(--card);border:1px solid var(--line)}
+.skill-card h3{font-size:13px;font-family:var(--font-mono);text-transform:none;margin-bottom:14px}
+.skill-card:nth-child(1) h3{color:var(--violet)}
+.skill-card:nth-child(2) h3{color:var(--coral)}
+.skill-card:nth-child(3) h3{color:var(--cyan)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;padding:6px 12px;border-radius:100px;background:color-mix(in srgb, var(--violet) 12%, transparent);color:var(--ink)}
+@media(max-width:700px){.skill-groups{grid-template-columns:1fr}}
+
+/* experience */
+.job{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--line)}
+.job:last-child{border-bottom:none}
+.job time{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft)}
+.job h3{font-size:18px;margin-bottom:2px}
+.job .org{color:var(--violet);font-size:14px;margin-bottom:12px;font-weight:500}
+.job ul{padding-left:18px;color:var(--ink-soft);font-size:14.5px}
+.job li{margin-bottom:6px}
+@media(max-width:600px){.job{grid-template-columns:1fr;gap:6px}}
+
+/* projects */
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.proj-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:border-color .2s,transform .2s}
+.proj-card:hover{border-color:var(--violet);transform:translateY(-3px)}
+.proj-card h3{font-size:17px;margin-bottom:8px}
+.proj-card p{color:var(--ink-soft);font-size:14px;margin-bottom:16px}
+.proj-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.proj-tags span{font-family:var(--font-mono);font-size:11px;padding:4px 9px;border-radius:6px;background:color-mix(in srgb, var(--cyan) 15%, transparent);color:var(--ink-soft)}
+.proj-link{font-size:13px;font-weight:600;color:var(--coral)}
+@media(max-width:700px){.proj-grid{grid-template-columns:1fr}}
+
+/* education */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px}
+.edu-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.edu-card h3{font-size:16px;margin-bottom:4px}
+.edu-card .org{color:var(--cyan);font-size:13.5px;margin-bottom:8px}
+.edu-card p{color:var(--ink-soft);font-size:13.5px}
+.certs{display:flex;flex-wrap:wrap;gap:10px}
+.cert{font-size:13px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);color:var(--ink-soft)}
+@media(max-width:700px){.edu-grid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{text-align:center}
+.contact-panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:48px;text-align:center}
+.contact-panel .mono{font-family:var(--font-mono);color:var(--ink-soft);font-size:12.5px;margin-bottom:18px;display:inline-block}
+.contact-panel h2{font-size:30px;margin-bottom:14px}
+.contact-panel p{color:var(--ink-soft);margin-bottom:32px;max-width:460px;margin-left:auto;margin-right:auto}
+.contact-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+footer{padding:32px 0 48px;text-align:center;font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="navrow">
+    <a href="#top" class="brand">apg.dev</a>
+    <nav><ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul></nav>
+    <div class="navtools">
+      <a class="navcv" href="resume.pdf" download>Download Resume ↓</a>
+      <button id="themeBtn" aria-label="Toggle dark mode">◐</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <span class="badge">Open to work — software engineering</span>
+    <h1><span class="accent">Anastacia Pena Galicia</span> builds things that work.</h1>
+    <p class="lede">Software engineer in training with a foundation across the stack — Python, Java, JavaScript, and SQL, plus Flask, FastAPI, React, Node.js, and PostgreSQL — and a background in high-stakes operational work that taught me to sweat the details.</p>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head"><h2>About</h2><span class="tag">// who's building this</span></div>
+      <div class="about-grid">
+        <div>
+          <p><strong>Software engineer with training</strong> in Python, Java, JavaScript, and SQL, plus hands-on experience debugging code and testing edge cases in production-like evaluation settings.</p>
+          <p>Built <strong>5+ full-stack projects</strong> with Flask, FastAPI, React, Node.js, and PostgreSQL, applying Git and CI/CD practices throughout. Currently sharpening those skills further through Year Up United's application development track.</p>
+          <p>Before code, I ran operations — leading a 50-person team, standardizing workflows, and cutting labor costs. That background is why I sweat the details: SOPs, edge cases, and data integrity aren't abstractions to me.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-row"><span>Location</span><span>New York, NY</span></div>
+          <div class="info-row"><span>Email</span><span>anastaciapena23@gmail.com</span></div>
+          <div class="info-row"><span>Phone</span><span>838-202-8145</span></div>
+          <div class="info-row"><span>Currently</span><span>Year Up United — App Dev Training</span></div>
+          <div class="info-row"><span>Studying</span><span>B.S. CS + AI/ML M.S., WGU</span></div>
+          <div class="info-row"><span>Languages</span><span>Spanish (native), English</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head"><h2>Skills</h2><span class="tag">// what I build with</span></div>
+      <div class="skill-groups">
+        <div class="skill-card">
+          <h3>Languages & Frameworks</h3>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span>
+            <span class="chip">SQL</span><span class="chip">Flask</span><span class="chip">FastAPI</span>
+            <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Tools & Practices</h3>
+          <div class="chips">
+            <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">CI/CD</span>
+            <span class="chip">VS Code</span><span class="chip">Linux/Unix</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Core CS</h3>
+          <div class="chips">
+            <span class="chip">Data Structures</span><span class="chip">Algorithms</span>
+            <span class="chip">Software Engineering</span><span class="chip">Systems Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head"><h2>Experience</h2><span class="tag">// the timeline</span></div>
+
+      <div class="job">
+        <time>Sept 2026 → Present</time>
+        <div>
+          <h3>Application Development Training</h3>
+          <div class="org">Year Up United — New York, NY</div>
+          <ul>
+            <li>Completing an intensive career-development program spanning professional skills, technical training, and a corporate internship</li>
+            <li>Coursework: application development, computer architecture, programming, database fundamentals, software testing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <time>Dec 2022 – Jun 2026</time>
+        <div>
+          <h3>Customer Service Supervisor</h3>
+          <div class="org">Food Garden Market — Brooklyn, NY</div>
+          <ul>
+            <li>Directed a team of 50+ associates, using daily operational metrics to spot bottlenecks and cut non-peak labor costs by 15%</li>
+            <li>Managed active inventory restocking, online order fulfillment, and floor coverage dynamically to keep operations smooth</li>
+            <li>Standardized weekly replenishment workflows, driving consistent team adherence to SOPs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <time>Nov 2021 – Dec 2022</time>
+        <div>
+          <h3>Customer Service Representative</h3>
+          <div class="org">PLS Check Cashers — Bronx, NY</div>
+          <ul>
+            <li>Processed 150+ check-cashing transactions daily via POS financial software at 99% accuracy</li>
+            <li>Verified identities and evaluated check authenticity using security databases and risk-assessment guidelines, serving 80+ clients per day</li>
+            <li>Resolved escalated inquiries with conflict-resolution skills, lifting customer satisfaction scores by 15%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head"><h2>Projects</h2><span class="tag">// what I've shipped</span></div>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <h3>Inventory & Task Tracker</h3>
+          <p>Full-stack CRUD app that replaced manual tracking for 50+ active users, cutting data entry errors by 30% — modeled on real inventory workflows.</p>
+          <div class="proj-tags"><span>Python</span><span>Flask</span><span>SQLite</span></div>
+          <a class="proj-link" href="https://apega-tech.github.io/inventory-tracker/" target="_blank" rel="noopener">View live demo →</a>
+        </div>
+        <div class="proj-card">
+          <h3>Algorithms & Data Structures Log</h3>
+          <p>A running repository of 90+ solved coding challenges with clear write-ups, improving technical interview speed by 25%.</p>
+          <div class="proj-tags"><span>Python</span><span>Java</span></div>
+          <a class="proj-link" href="https://apega-tech.github.io/algorithms-log/" target="_blank" rel="noopener">View live demo →</a>
+        </div>
+        <div class="proj-card">
+          <h3>Transaction Data Analysis</h3>
+          <p>Exploratory analysis of a public financial dataset to surface trends and anomalies, visualized with Python.</p>
+          <div class="proj-tags"><span>Python</span><span>pandas</span><span>SQL</span></div>
+          <a class="proj-link" href="https://apega-tech.github.io/transaction-analysis/" target="_blank" rel="noopener">View live demo →</a>
+        </div>
+        <div class="proj-card">
+          <h3>Compliance Data Validator</h3>
+          <p>A rule-based tool that flags incomplete or anomalous records, inspired by real BSA/AML compliance workflows.</p>
+          <div class="proj-tags"><span>Python</span><span>HTML</span></div>
+          <a class="proj-link" href="https://apega-tech.github.io/compliance-validator/" target="_blank" rel="noopener">View live demo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head"><h2>Education & Certifications</h2><span class="tag">// the paper trail</span></div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3>B.S./M.S. Computer Science (AI/ML)</h3>
+          <div class="org">Western Governors University — Millcreek, UT</div>
+          <p>Accelerated program · Expected graduation Dec 2028</p>
+        </div>
+        <div class="edu-card">
+          <h3>Application Development Training</h3>
+          <div class="org">Year Up United — New York, NY</div>
+          <p>Professional & technical training with corporate internship · Sept 2026–Present</p>
+        </div>
+      </div>
+      <div class="certs">
+        <span class="cert">Linux Certification — WGU</span>
+        <span class="cert">AXELOS ITIL® Foundation</span>
+        <span class="cert">Java Developer — WGU</span>
+        <span class="cert">Back-End Developer — WGU</span>
+        <span class="cert">AI Optimization Developer — WGU</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-panel">
+        <span class="mono">// open to opportunities</span>
+        <h2>Let's build something.</h2>
+        <p>I'm looking for entry-level Software Engineer roles — open to frontend, backend, or full-stack. Reach out, I'd love to talk.</p>
+        <div class="contact-links">
+          <a class="btn btn-outline" href="mailto:anastaciapena23@gmail.com">Email Me</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/apega-tech" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn btn-outline" href="resume.pdf" download>Resume ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>built by Anastacia Pena Galicia</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('themeBtn');
+  function apply(theme){
+    if(theme){ root.setAttribute('data-theme', theme); }
+    btn.textContent = (theme === 'dark') ? '☀' : '◐';
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('apg-theme'); } catch(e){}
+  if(saved){ apply(saved); }
+  btn.addEventListener('click', function(){
+    var current = root.getAttribute('data-theme');
+    var isDark = current === 'dark' || (!current && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var next = isDark ? 'light' : 'dark';
+    apply(next);
+    try { localStorage.setItem('apg-theme', next); } catch(e){}
+  });
+})();
+</script>
+
+</body>
+</html>
